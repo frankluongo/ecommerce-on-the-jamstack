@@ -10,9 +10,11 @@ export const Header = () => {
     <header className={css.Header}>
       <Container extraClasses={css.HeaderContent}>
         <h1>{STORE_NAME}</h1>
-        <p className={css.Cart}>
-          <FaShoppingCart className={css.CartIcon} /> $0.00
-        </p>
+          <button className={`${css.Cart} snipcart-checkout`}>
+            <FaShoppingCart className={css.CartIcon} />
+            <span className="snipcart-total-price"></span>
+            <span className={`${css.Count} snipcart-items-count`}></span>
+          </button>
       </Container>
     </header>
   )

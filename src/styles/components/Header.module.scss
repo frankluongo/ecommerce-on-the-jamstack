@@ -1,12 +1,38 @@
 .Cart {
+  position: relative;
+
   align-items: center;
   display: flex;
   justify-content: center;
   margin-left: auto;
+
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
 }
 
 .CartIcon {
   margin-right: 0.5rem;
+}
+
+.Count {
+  inset: -0.5rem -0.5rem auto auto;
+  position: absolute;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 1rem;
+  width: 1rem;
+
+  color: white;
+  font-size: 0.75em;
+  font-weight: bold;
+
+  background-color: green;
+
+  border-radius: 50%;
 }
 
 .Header {

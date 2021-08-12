@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import css from "#styles/components/Product.module.scss"
+import { Button } from './Button'
 
 interface ProductInterface {
   id: string,
@@ -18,7 +19,17 @@ export const Product = ({ product }: { product: ProductInterface }) => {
     <h3>{product.title}</h3>
     <p>${product.price}</p>
     <p>
-      <button>Add To Cart</button>
+      <Button
+        extraClasses="snipcart-add-item"
+        data-item-id={product.id}
+        data-item-price={product.price}
+        data-item-url={`/`}
+        data-item-description={product.title}
+        data-item-image={product.image}
+        data-item-name={product.title}
+      >
+        Add To Cart
+      </Button>
     </p>
   </li>
   )
